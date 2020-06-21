@@ -14,10 +14,14 @@ public class MockSuperGroupFactory {
     private FKITSuperGroupService superGroupService;
 
     public FKITSuperGroupDTO generateSuperGroup(String groupName) {
+        return this.generateSuperGroup(groupName, GroupType.COMMITTEE);
+    }
+
+    public FKITSuperGroupDTO generateSuperGroup(String groupName, GroupType groupType) {
         return new FKITSuperGroupDTO(
                 groupName,
                 groupName,
-                GroupType.COMMITTEE,
+                groupType,
                 GenerationUtils.generateRandomString()
         );
     }

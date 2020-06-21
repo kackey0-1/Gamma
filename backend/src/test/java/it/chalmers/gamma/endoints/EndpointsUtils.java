@@ -76,6 +76,7 @@ public final class EndpointsUtils { // Doesn't return me endpoints.
                 new Endpoint("/admin/groups/posts/%s", PUT, PostDTO.class),
                 new Endpoint("/admin/groups/posts/%s", DELETE, PostDTO.class),
                 new Endpoint("/admin/groups/posts/%s/usage", GET, PostDTO.class),
+                new Endpoint("/admin/goldapps", GET),
                 new Endpoint("/admin/superGroups", POST),
                 new Endpoint("/admin/superGroups/%s", PUT, FKITSuperGroupDTO.class),
                 new Endpoint("/admin/superGroups/%s", DELETE, FKITSuperGroupDTO.class),
