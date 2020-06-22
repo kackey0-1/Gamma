@@ -120,7 +120,7 @@ public class GoldappsController {
     }
 
     private List<JSONObject> addAliases(List<JSONObject> groupsJson, GoldappsGroupSerializer goldappsGroupSerializer) {
-        PostDTO kassor = this.postService.getPostDTO("kassör");
+        PostDTO kassor = this.postService.getPostDTO("Kassör"); // TODO Make this not hardcoded
 
         List<FKITSuperGroupDTO> groups = this.fkitSuperGroupService.getAllGroups()
                 .stream().filter(g -> g.getType().equals(GroupType.COMMITTEE))
@@ -129,7 +129,7 @@ public class GoldappsController {
         this.addAliasToJson(goldappsGroupSerializer, groupsJson, groups,
                 kassor, "kassorer.kommitteer@chalmers.it");
 
-        PostDTO ordf = this.postService.getPostDTO("ordförande");
+        PostDTO ordf = this.postService.getPostDTO("Ordförande");
         this.addAliasToJson(goldappsGroupSerializer, groupsJson, groups,
                 ordf, "ordforanden.kommitteer@chalmers.it");
 

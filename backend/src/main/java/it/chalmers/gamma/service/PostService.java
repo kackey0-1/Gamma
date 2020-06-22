@@ -64,7 +64,7 @@ public class PostService {
             return this.repository.findById(UUID.fromString(post))
                     .orElseThrow(PostDoesNotExistResponse::new).toDTO();
         }
-        return this.repository.findByPostName_Sv(post.toLowerCase())
+        return this.repository.findByPostName_Sv(post)
                 .orElseThrow(PostDoesNotExistResponse::new).toDTO();
     }
 
